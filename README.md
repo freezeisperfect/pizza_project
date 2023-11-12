@@ -1,2 +1,1 @@
-# pizza_project
-Avito Analytics Academy | Python 🐍
+# Avito Analytics Academy | Python 🐍 | Final Task
