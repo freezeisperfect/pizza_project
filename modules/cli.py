@@ -16,8 +16,6 @@ def cli():
 @click.option('--size', default='XL')
 @click.argument('pizza', nargs=1)
 def order(pizza: str, delivery: bool, size: str):
-
-    print(ACTUAL_PIZZAS)
     if not isinstance(pizza, str) or not isinstance(size, str):
         raise ValueError
     if pizza.lower() not in ACTUAL_PIZZAS.keys():
