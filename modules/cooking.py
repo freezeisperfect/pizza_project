@@ -4,8 +4,8 @@ import inspect
 class Pizza:
     actual_pizza_sizes = ['L', 'XL']
 
-    def __init__(self, pizza_size: str = 'XL') -> None:
-        if not isinstance(pizza_size, str):
+    def __init__(self, pizza_size: str = 'XL', emoji: str = '🤔') -> None:
+        if not isinstance(pizza_size, str) or not isinstance(emoji, str):
             raise ValueError
         if pizza_size not in self.actual_pizza_sizes:
             raise TypeError
@@ -13,6 +13,7 @@ class Pizza:
         self.receipt = None
         self.size = pizza_size
         self.name = str(self)
+        self.emoji = emoji
 
     def __str__(self) -> str:
         return self.__class__.__name__
@@ -28,24 +29,24 @@ class Pizza:
         print(f'LET HIM COOK! (◕‿◕) {str(self)} is cooking!')
 
     def dict(self) -> dict[str, list[str]]:
-        return {str(self): self.receipt}
+        return {self.name: self.receipt}
 
 
 class Margherita(Pizza):
-    def __init__(self, pizza_size: str = 'XL'):
-        super().__init__(pizza_size)
+    def __init__(self, pizza_size: str = 'XL', emoji: str = '🧀'):
+        super().__init__(pizza_size, emoji)
         self.receipt = ['tomato sauce', 'mozzarella', 'tomatoes']
 
 
 class Pepperoni(Pizza):
-    def __init__(self, pizza_size: str = 'XL'):
-        super().__init__(pizza_size)
+    def __init__(self, pizza_size: str = 'XL', emoji: str = '🍕'):
+        super().__init__(pizza_size, emoji)
         self.receipt = ['tomato sauce', 'mozzarella', 'pepperoni']
 
 
 class Hawaiian(Pizza):
-    def __init__(self, pizza_size: str = 'XL'):
-        super().__init__(pizza_size)
+    def __init__(self, pizza_size: str = 'XL', emoji: str = '🍍'):
+        super().__init__(pizza_size, emoji)
         self.receipt = ['tomato sauce', 'mozzarella', 'chicken', 'pineapples']
 
 
