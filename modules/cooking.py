@@ -1,4 +1,5 @@
 import inspect
+from log import log
 
 
 class Pizza:
@@ -25,6 +26,7 @@ class Pizza:
             and self.size == other.size \
             and set(self.receipt) == set(other.receipt)
 
+    @log('👨‍🍳 Cooked in {} sec!')
     def cook(self) -> None:
         print(f'LET HIM COOK! (◕‿◕) {str(self)} is cooking!')
 

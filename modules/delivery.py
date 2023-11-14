@@ -1,5 +1,6 @@
 from typing import Type
 from cooking import Pizza
+from log import log
 
 
 class Delivery:
@@ -10,8 +11,16 @@ class Delivery:
 
     def get_pizza(self):
         if self.delivery_status:
-            print(f'{self.pizza_name} ({self.pizza_size}) '
-                  'is about to be delivered!')
+            self.courier()
         else:
-            print(f'{self.pizza_name} ({self.pizza_size}) '
-                  'is about to be picked up by client!')
+            self.client_taking()
+
+    @log('🏍️ Delivered in {} sec!')
+    def courier(self):
+        print(f'{self.pizza_name} ({self.pizza_size}) '
+              'is about to be delivered!')
+
+    @log('👜 Took in {} sec!')
+    def client_taking(self):
+        print(f'{self.pizza_name} ({self.pizza_size}) '
+              'is about to be picked up by client!')
