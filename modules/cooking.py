@@ -162,7 +162,7 @@ def get_pizzas() -> dict[str, Type]:
     return classes
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # pragma: no cover
     pizza = Pizza()
     print(str(pizza))
     my_pizza = Margherita()
