@@ -1,5 +1,5 @@
-from modules.cooking import Pizza, Margherita, Pepperoni, Hawaiian, get_pizzas
 import unittest
+from modules.cooking import Pizza, Margherita, Pepperoni, Hawaiian, get_pizzas
 
 
 class TestPizza(unittest.TestCase):
