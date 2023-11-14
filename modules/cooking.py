@@ -90,7 +90,7 @@ class Pizza:
         bool
             Возвращает True, если пиццы эквивалентны друг другу, иначе - False.
         """
-        if not isinstance(other, Pizza):
+        if not isinstance(other, Pizza) or self.receipt is None:
             raise ValueError
         return self.name == other.name \
             and self.size == other.size \
