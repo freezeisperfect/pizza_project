@@ -26,9 +26,9 @@ class Pizza:
             and self.size == other.size \
             and set(self.receipt) == set(other.receipt)
 
-    @log('👨‍🍳 Cooked in {} sec!')
+    @log('💨 Cooked in {} sec!')
     def cook(self) -> None:
-        print(f'LET HIM COOK! (◕‿◕) {str(self)} is cooking!')
+        print(f'🥵 LET HIM COOK! (◕‿◕) {self.name} {self.emoji} is cooking!')
 
     def dict(self) -> dict[str, list[str]]:
         return {self.name: self.receipt}
