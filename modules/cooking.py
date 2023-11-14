@@ -1,5 +1,5 @@
 import inspect
-from log import log
+from modules.log import log
 from typing import Type
 
 
@@ -163,6 +163,8 @@ def get_pizzas() -> dict[str, Type]:
 
 
 if __name__ == '__main__':
+    pizza = Pizza()
+    print(str(pizza))
     my_pizza = Margherita()
     print(my_pizza.dict())
     my_pizza.cook()

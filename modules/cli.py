@@ -1,6 +1,6 @@
 import click
-from cooking import get_pizzas
-from delivery import Delivery
+from modules.cooking import get_pizzas
+from modules.delivery import Delivery
 
 
 ACTUAL_PIZZAS = get_pizzas()

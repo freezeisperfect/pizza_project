@@ -1,6 +1,6 @@
 from typing import Type
-from cooking import Pizza
-from log import log
+from modules.cooking import Pizza
+from modules.log import log
 
 
 class Delivery:
