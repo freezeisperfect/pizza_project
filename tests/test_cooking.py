@@ -10,7 +10,7 @@ class TestPizza(unittest.TestCase):
 
     def test_pizza_equals(self):
         with self.assertRaises(ValueError):
-            Pizza('XL') == Pizza('XL')
+            Pizza('XL') == 'Pizza (XL)'
 
     def test_pizza_wrong_size_value(self):
         with self.assertRaises(ValueError):
@@ -22,7 +22,7 @@ class TestPizza(unittest.TestCase):
 
     def test_pizza_dict(self):
         self.assertEqual(
-            Pizza().dict(), {'Pizza': None}
+            Pizza().dict(), {'Pizza': []}
         )
 
     def test_margherita_instance(self):

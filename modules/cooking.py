@@ -14,7 +14,7 @@ class Pizza:
 
     Class attributes
     ----------------
-    receipt: None or dict
+    receipt: list[str]
         Рецепт пиццы, представленный в виде списка, где ключом является
         название пиццы, а значением - список из ингридиентов для пиццы.
         В классе Pizza для абстрактной пиццы инициализирован как None.
@@ -59,7 +59,7 @@ class Pizza:
         if size not in self.actual_pizza_sizes:
             raise TypeError
 
-        self.receipt = None
+        self.receipt = []
         self.size = size
         self.name = str(self)
         self.emoji = emoji
