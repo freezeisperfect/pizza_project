@@ -16,7 +16,8 @@ class TestDelivery(unittest.TestCase):
         pizza_instance.courier.__wrapped__(pizza_instance)
         mock_print.assert_called_with(
             f'{pizza_instance.pizza_emoji} {pizza_instance.pizza_name} '
-            f'({pizza_instance.pizza_size}) is about to be delivered!'
+            f'({pizza_instance.pizza_size}) is about to be '
+            'delivered!'
         )
 
     @patch('builtins.print')
@@ -25,7 +26,8 @@ class TestDelivery(unittest.TestCase):
         pizza_instance.client_taking.__wrapped__(pizza_instance)
         mock_print.assert_called_with(
             f'{pizza_instance.pizza_emoji} {pizza_instance.pizza_name} '
-            f'({pizza_instance.pizza_size}) is about to be picked up by client!'
+            f'({pizza_instance.pizza_size}) is about to be '
+            'picked up by client!'
         )
 
 

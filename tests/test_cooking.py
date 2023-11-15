@@ -107,7 +107,7 @@ class TestPizza(unittest.TestCase):
         for pizza_name, pizza_class in pizzas.items():
             self.assertTrue(
                 issubclass(pizza_class, Pizza),
-                f"{pizza_name} class is not a subclass of Pizza"
+                f'{pizza_name} class is not a subclass of Pizza'
             )
 
 
