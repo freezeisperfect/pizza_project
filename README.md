@@ -1,1 +1,1 @@
-# Avito Analytics Academy | Python 🐍 | Final Task
+# Avito Analytics Academy | Python 🐍 | Final Project
